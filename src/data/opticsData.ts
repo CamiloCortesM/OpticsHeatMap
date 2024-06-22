@@ -1,4 +1,4 @@
-import { OpticWithLeads } from './interfaces';
+import { OpticWithLeads } from '../interfaces/OpticsLeads';
 
 export const opticsData: OpticWithLeads[] = [
   {
@@ -13,7 +13,7 @@ export const opticsData: OpticWithLeads[] = [
     name: 'Optica Norte',
     latitude: 37.8044,
     longitude: -122.2711,
-    numLeads: 35,
+    numLeads: 10,
   },
   {
     id: 3,
@@ -21,20 +21,6 @@ export const opticsData: OpticWithLeads[] = [
     latitude: 37.6879,
     longitude: -122.4702,
     numLeads: 45,
-  },
-  {
-    id: 4,
-    name: 'Optica Este',
-    latitude: 37.7749,
-    longitude: -122.4194,
-    numLeads: 25,
-  },
-  {
-    id: 5,
-    name: 'Optica Oeste',
-    latitude: 37.8044,
-    longitude: -122.2711,
-    numLeads: 60,
   },
 ];
 

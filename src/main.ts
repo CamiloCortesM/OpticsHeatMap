@@ -1,10 +1,11 @@
-import './style.css';
+import './styles/main.css';
 import {
+  initMap,
   changeGradient,
   changeRadius,
   changeOpacity,
   toggleHeatmap,
-} from './map';
+} from './maps';
 
 document
   .getElementById('toggle-heatmap')!
@@ -22,3 +23,10 @@ document.getElementById('radius-range')!.addEventListener('input', (event) => {
   const target = event.target as HTMLInputElement;
   changeRadius(parseInt(target.value));
 });
+
+declare global {
+  interface Window {
+    initMap: () => void;
+  }
+}
+window.initMap = initMap;
