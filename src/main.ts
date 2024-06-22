@@ -24,9 +24,25 @@ document.getElementById('radius-range')!.addEventListener('input', (event) => {
   changeRadius(parseInt(target.value));
 });
 
+document.querySelector('#toggle-button')?.addEventListener('click', () => {
+  const floatingPanel = document.querySelector(
+    '#floating-panel'
+  ) as HTMLElement;
+  if (
+    floatingPanel.style.display === 'none' ||
+    floatingPanel.style.display === ''
+  ) {
+    floatingPanel.style.display = 'flex';
+  } else {
+    floatingPanel.style.display = 'none';
+  }
+});
+
 declare global {
   interface Window {
     initMap: () => void;
   }
 }
 window.initMap = initMap;
+
+
