@@ -22,6 +22,9 @@ export const generateRandomPoints = (
 };
 
 export const getPoints = (): google.maps.LatLng[] => {
+
+  // TODO: Send petition to the server to get the optics data
+
   let points: google.maps.LatLng[] = [];
   opticsData.forEach((optic) => {
     points = points.concat(
