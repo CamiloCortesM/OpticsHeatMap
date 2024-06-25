@@ -7,6 +7,9 @@ import {
   toggleHeatmap,
 } from './maps';
 
+/**
+ * Adds event listeners to the DOM elements for interaction with the heatmap.
+ */
 document
   .getElementById('toggle-heatmap')!
   .addEventListener('click', toggleHeatmap);
@@ -24,6 +27,9 @@ document.getElementById('radius-range')!.addEventListener('input', (event) => {
   changeRadius(parseInt(target.value));
 });
 
+/**
+ * Toggles the visibility of the floating panel.
+ */
 document.querySelector('#toggle-button')?.addEventListener('click', () => {
   const floatingPanel = document.querySelector(
     '#floating-panel'
@@ -38,11 +44,15 @@ document.querySelector('#toggle-button')?.addEventListener('click', () => {
   }
 });
 
-declare global {
+/**
+ * Declares a global interface to make initMap accessible globally.
+ */declare global {
   interface Window {
     initMap: () => void;
   }
 }
+
+// Assign the initMap function to the global window object.
 window.initMap = initMap;
 
 

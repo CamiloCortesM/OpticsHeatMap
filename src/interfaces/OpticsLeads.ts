@@ -1,7 +1,10 @@
+/**
+ * Interface representing an optical store with its associated leads.
+ */
 export interface OpticWithLeads {
-  id: number;
-  name: string;
-  latitude: number;
-  longitude: number;
-  numLeads: number;
+  id: number; // Unique identifier for the optical store
+  name: string; // Name of the optical store
+  latitude: number; // Latitude coordinate of the optical store
+  longitude: number; // Longitude coordinate of the optical store
+  numLeads: number; // Number of leads associated with the optical store
 }

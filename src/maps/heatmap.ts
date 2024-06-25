@@ -3,6 +3,9 @@ import { getPoints } from './utils';
 let map: google.maps.Map;
 let heatmap: google.maps.visualization.HeatmapLayer;
 
+/**
+ * Initializes the Google Map and the Heatmap Layer.
+ */
 export const initMap = (): void => {
   map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
     zoom: 13,
@@ -16,10 +19,16 @@ export const initMap = (): void => {
   });
 };
 
+/**
+ * Toggles the heatmap on and off.
+ */
 export const toggleHeatmap = (): void => {
   heatmap.setMap(heatmap.getMap() ? null : map);
 };
 
+/**
+ * Changes the gradient of the heatmap.
+ */
 export const changeGradient = (): void => {
   const gradient = [
     'rgba(0, 255, 255, 0)', 
@@ -39,10 +48,20 @@ export const changeGradient = (): void => {
   heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
 };
 
+/**
+ * Changes the radius of the heatmap points.
+ * 
+ * @param radius - The new radius for the heatmap points.
+ */
 export const changeRadius = (radius: number): void => {
   heatmap.set('radius', radius);
 };
 
+/**
+ * Changes the opacity of the heatmap.
+ * 
+ * @param opacity - The new opacity for the heatmap, as a percentage (0-100).
+ */
 export const changeOpacity = (opacity: number): void => {
   heatmap.set('opacity', opacity * 0.01);
 };
