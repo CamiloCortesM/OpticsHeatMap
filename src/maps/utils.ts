@@ -61,7 +61,7 @@ export const getPoints = async (): Promise<google.maps.LatLng[]> => {
         optic.latitude,
         optic.longitude,
         optic.countLeads,
-        500
+        1000
       )
     ); // 3000 meters radius
   });
